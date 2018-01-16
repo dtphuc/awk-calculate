@@ -7,8 +7,8 @@ fi
 
 inputfile=$1
 awk -F, '{
-    a[$7]+=$2;
-    b[$7]+=$6
+    a[$7","$3","$4]+=$2;
+    b[$7","$3","$4]+=$6
 }
 END {
     print "eWalletID, TotalTransactionAmount, TotalTransactionType\n"
